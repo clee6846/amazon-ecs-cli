@@ -59,7 +59,7 @@ func TestServiceUp(t *testing.T, p *Project) {
 	// When
 	out, err := cmd.Output()
 	if err != nil {
-		assert.FailNowf(t, "Failed to create service", "Error %v running %v", err, args)
+		assert.FailNowf(t, "Failed to create service", "Error %v running %v, out: %s", err, args, string(out))
 	}
 
 	// Then
